@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AIMS Financials | Plan Your Future</title>
+    <title>AIMS Financials | Maximize Wealth & Minimize Taxes</title>
     <!--
-      The main stylesheet defines the colour palette and responsive layout for the
-      site. Colours are pulled directly from the supplied company logo to
-      maintain brand consistency. Icons are provided via the Ionicons CDN.
+      This page combines the clean layout of the original simple site with the rich
+      content of the more detailed Next.js version. Each navigation link maps to
+      a section below, giving visitors quick access to information about our
+      services, process, philosophy, results and frequently asked questions.
     -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Ionicons for scalable vector icons -->
     <script
       type="module"
       src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -20,22 +22,21 @@
     ></script>
   </head>
   <body>
+    <!-- Navigation -->
     <header>
       <nav class="navbar">
         <div class="nav-container">
           <div class="logo">
-            <!-- The company logo provided by the user. Alt text ensures
-                 accessibility for assistive technologies. -->
             <img src="Logo-06.png" alt="AIMS Financials logo" />
           </div>
           <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#features">Why AIMS</a></li>
+            <li><a href="#work">What I Do</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#philosophy">Philosophy</a></li>
           </ul>
-          <a href="#schedule" class="btn-primary nav-cta">Book a Meeting</a>
-          <!-- Hamburger icon for mobile navigation -->
+          <a href="#book" class="btn-primary nav-cta">Book a Fit Call</a>
           <button class="nav-toggle" aria-label="Toggle navigation">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -44,115 +45,244 @@
         </div>
       </nav>
     </header>
+
     <main>
-      <!-- Hero section with a striking call‑to‑action. A custom background
-           illustrates financial growth while maintaining the brand palette. -->
+      <!-- Hero Section -->
       <section id="home" class="hero">
         <div class="overlay"></div>
         <div class="hero-content container">
-          <h1>Plan Your Future with Confidence</h1>
+          <h1>Maximize Wealth by <span class="highlight">Minimizing Taxes</span></h1>
           <p>
-            We provide personalised financial guidance to help executives and
-            professionals gain clarity, control and peace of mind over their
-            financial lives.
+            I help engineering executives turn tax friction into compounding fuel—
+            using legal, transparent strategies you can hand to your CPA.
           </p>
-          <a href="#schedule" class="btn-primary">Schedule Your Complimentary Session</a>
+          <div class="hero-buttons">
+            <a href="#book" class="btn-primary">Start with a 15‑min call</a>
+            <a href="#work" class="btn-secondary">See how I help</a>
+          </div>
+          <div class="hero-tags">
+            <div class="tag"><ion-icon name="checkmark-circle-outline"></ion-icon> Education‑first, no pressure</div>
+            <div class="tag"><ion-icon name="checkmark-circle-outline"></ion-icon> Built for $500K–$3M+ W‑2 earners with equity</div>
+          </div>
         </div>
       </section>
-      <!-- About section introduces the practice and philosophy. The copy is
-           intentionally broad because personal LinkedIn information could not
-           be retrieved. -->
-      <section id="about" class="about">
-        <div class="container">
-          <h2>About Us</h2>
-          <p>
-            AIMS Financials is a boutique financial planning firm based in
-            California. We partner with successful professionals and
-            entrepreneurs to build thoughtful strategies that align money with
-            values. Our process goes beyond numbers—it centres on your
-            aspirations, family and wellbeing.
-          </p>
-          <p>
-            By taking the time to understand what truly matters to you, we
-            craft customised plans designed to simplify complexity, enhance
-            efficiency and empower you to achieve your goals. Your success is
-            our mission, and your peace of mind is our priority.
-          </p>
-        </div>
-      </section>
-      <!-- Services section highlights core offerings using simple cards with
-           matching icons. -->
-      <section id="services" class="services">
+
+      <!-- Services Section -->
+      <section id="services" class="services-section">
         <div class="container">
           <h2>Our Services</h2>
           <div class="service-cards">
             <div class="service-card">
-              <ion-icon name="bar-chart-outline"></ion-icon>
-              <h3>Investment Management</h3>
-              <p>
-                Tailored investment strategies designed to grow and preserve
-                your wealth over the long term.
-              </p>
+              <ion-icon name="stats-chart-outline"></ion-icon>
+              <h3>Tax Planning</h3>
+              <p>Strategize to reduce your tax burden while aligning with your career and goals.</p>
             </div>
             <div class="service-card">
-              <ion-icon name="calendar-number-outline"></ion-icon>
+              <ion-icon name="time-outline"></ion-icon>
               <h3>Retirement Planning</h3>
-              <p>
-                Clear roadmaps to ensure a comfortable, secure retirement that
-                reflects your lifestyle and goals.
-              </p>
+              <p>Plan for financial independence and lifetime income with a tax-smart approach.</p>
             </div>
             <div class="service-card">
-              <ion-icon name="shield-checkmark-outline"></ion-icon>
-              <h3>Risk Management</h3>
-              <p>
-                Comprehensive risk strategies to protect your family and assets
-                against the unexpected.
-              </p>
+              <ion-icon name="people-outline"></ion-icon>
+              <h3>Estate &amp; Legacy</h3>
+              <p>Design structures that protect your family and transfer wealth efficiently.</p>
             </div>
             <div class="service-card">
-              <ion-icon name="calculator-outline"></ion-icon>
-              <h3>Tax &amp; Estate Planning</h3>
-              <p>
-                Optimisation of your tax position and guidance on the smooth
-                transfer of wealth across generations.
-              </p>
+              <ion-icon name="layers-outline"></ion-icon>
+              <h3>RSU &amp; ISO Vesting</h3>
+              <p>Optimize vesting and exercises for maximum after-tax benefit and flexibility.</p>
             </div>
           </div>
         </div>
       </section>
-      <!-- Scheduling section embeds the external appointment tool in an
-           iframe, allowing visitors to book directly from the site. -->
-      <section id="schedule" class="schedule">
+
+      <!-- Why AIMS / Features Section -->
+      <section id="features" class="features">
         <div class="container">
-          <h2>Book an Appointment</h2>
-          <p>
-            Ready to take the next step? Pick a time that works for you and
-            let’s start planning your future.
+          <h2>What Clients Get</h2>
+          <div class="feature-cards">
+            <div class="feature-card">
+              <ion-icon name="shield-checkmark-outline"></ion-icon>
+              <h3>Legal &amp; Ethical</h3>
+              <p>Incentives in the tax code—never loopholes.</p>
+            </div>
+            <div class="feature-card">
+              <ion-icon name="trending-up-outline"></ion-icon>
+              <h3>Tax‑first Growth</h3>
+              <p>We optimize after‑tax outcomes, not just returns.</p>
+            </div>
+            <div class="feature-card">
+              <ion-icon name="briefcase-outline"></ion-icon>
+              <h3>Built for Execs</h3>
+              <p>We specialize in aligning income and complex equity with your goals.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What I Do / Playbooks Section -->
+      <section id="work" class="playbooks-section">
+        <div class="container">
+          <h2>What I Do</h2>
+          <p class="section-description">
+            Your tax‑smart <span class="emphasis">quarterback</span>—coordinating
+            taxes, equity and estate so every move supports freedom, impact and
+            legacy.
           </p>
-          <div class="iframe-wrapper">
-            <iframe
-              src="https://aimsfinancials.lirplan.com/calendar"
-              title="AIMS Financials appointment scheduler"
-              loading="lazy"
-              allowtransparency="true"
-            ></iframe>
+          <!-- Illustrative image showing coordination across taxes, equity and estate -->
+          <div class="synergy-wrapper">
+            <img src="synergy.png" alt="Coordination illustration" class="synergy-image" />
+          </div>
+          <!-- Interactive dashboard cards showing our primary service areas -->
+          <div class="dashboard-cards">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <ion-icon name="stats-chart-outline"></ion-icon>
+                  <h3>Tax Planning</h3>
+                </div>
+                <div class="flip-card-back">
+                  <p>Reduce your tax burden while aligning with your career and goals.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <h3>Retirement Planning</h3>
+                </div>
+                <div class="flip-card-back">
+                  <p>Plan for financial independence with a tax‑smart approach and lifetime income.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <ion-icon name="people-outline"></ion-icon>
+                  <h3>Estate &amp; Legacy</h3>
+                </div>
+                <div class="flip-card-back">
+                  <p>Protect your heirs and transfer wealth efficiently with thoughtful structures.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <ion-icon name="layers-outline"></ion-icon>
+                  <h3>RSU &amp; ISO Vesting</h3>
+                </div>
+                <div class="flip-card-back">
+                  <p>Optimize vesting and exercises to maximize your after‑tax benefit and flexibility.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Philosophy Section -->
+      <section id="philosophy" class="philosophy-section">
+        <div class="container">
+          <h2>Philosophy</h2>
+          <p class="section-description">
+            Too often families focus on just one piece of the financial puzzle. A holistic approach connects taxes, equity and estate so the decisions you make today align with your long‑term goals and safeguard the legacy you wish to leave behind.
+          </p>
+          <div class="philosophy-grid">
+            <div class="posts">
+              <ul class="philosophy-list">
+                <li>See the big picture – integrate all stages of your financial life to align short‑ and long‑term goals.</li>
+                <li>Protect your legacy – plan how assets will be preserved and transferred efficiently for generations.</li>
+                <li>Adapt with change – build strategies that navigate shifts in markets and tax laws while maximizing opportunities.</li>
+                <li>Change your mindset to focus on big gains – small wins matter, but the major levers build a lasting legacy.</li>
+              </ul>
+            </div>
+            <div class="feelings">
+              <div class="feel-header">What you’ll feel</div>
+              <ul>
+                <li><ion-icon name="compass-outline"></ion-icon> Clarity: one plan linking taxes, equity &amp; estate</li>
+                <li><ion-icon name="heart-outline"></ion-icon> Confidence: a trusted partner coordinating your advisors</li>
+                <li><ion-icon name="rocket-outline"></ion-icon> Momentum: focus on high‑impact moves that accelerate progress</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Call to Action / Book Section -->
+      <section id="book" class="cta-section">
+        <div class="container">
+          <div class="cta-card">
+            <div class="cta-content">
+              <h3>Ready to uncover your opportunities?</h3>
+              <p>In 15 minutes, we’ll see if there’s a fit and point you to the next steps.</p>
+              <ul>
+                <li><ion-icon name="checkmark-circle-outline"></ion-icon> We’ll discuss your challenges and identify opportunities</li>
+                <li><ion-icon name="checkmark-circle-outline"></ion-icon> Transparent scope and respect for your existing advisor relationships</li>
+              </ul>
+              <!-- Goals ribbon: primary goals are displayed as a horizontal list of tags.
+                   Each item includes a hidden tooltip with a short description that appears on hover. -->
+              <div class="goals-ribbon">
+                <div class="goal-item">
+                  <ion-icon name="stats-chart-outline"></ion-icon>
+                  <span>Tax planning</span>
+                  <div class="goal-tooltip">Strategize to reduce your tax burden while aligning with your career and goals.</div>
+                </div>
+                <div class="goal-item">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>Retirement planning</span>
+                  <div class="goal-tooltip">Plan for financial independence and lifetime income with a tax-smart approach.</div>
+                </div>
+                <div class="goal-item">
+                  <ion-icon name="people-outline"></ion-icon>
+                  <span>Estate &amp; legacy</span>
+                  <div class="goal-tooltip">Design structures that protect your family and transfer wealth efficiently.</div>
+                </div>
+                <div class="goal-item">
+                  <ion-icon name="layers-outline"></ion-icon>
+                  <span>RSU &amp; ISO vesting</span>
+                  <div class="goal-tooltip">Optimize vesting and exercises for maximum after-tax benefit and flexibility.</div>
+                </div>
+              </div>
+              <!-- Direct link to the scheduler for those who prefer a new tab -->
+              <a href="https://aimsfinancials.lirplan.com/calendar" class="btn-primary schedule-btn" target="_blank" rel="noopener noreferrer">Schedule a Fit Call</a>
+            </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- Footer -->
     <footer>
-      <div class="container footer-content">
-        <p>&copy; 2025&nbsp;AIMS Financials. All rights reserved.</p>
-        <nav class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#schedule">Schedule</a>
-        </nav>
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-title">About AIMS Financials</div>
+          <p class="footer-text">We help engineering executives maximize wealth with smart, legal tax strategies and coordinated estate planning.</p>
+        </div>
+        <div>
+          <div class="footer-title">Focus Areas</div>
+          <ul class="footer-list">
+            <li>W‑2 income optimization</li>
+            <li>RSU / ISO planning</li>
+            <li>PPLI, ILITs, CRUTs &amp; DAFs</li>
+            <li>Targeted incentives (case‑by‑case)</li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-title">Compliance</div>
+          <p class="footer-text">Educational content only. Not tax, legal, or investment advice. Decisions should be made with qualified professionals and your actual documents.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="year"></span> AIMS Financials — All rights reserved.
       </div>
     </footer>
-    <!-- Custom script for navigation toggle and smooth scrolling -->
+
     <script src="script.js"></script>
   </body>
 </html>
