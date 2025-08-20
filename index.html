@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIMS Financials | Plan Your Future</title>
+    <!--
+      The main stylesheet defines the colour palette and responsive layout for the
+      site. Colours are pulled directly from the supplied company logo to
+      maintain brand consistency. Icons are provided via the Ionicons CDN.
+    -->
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <!-- The company logo provided by the user. Alt text ensures
+                 accessibility for assistive technologies. -->
+            <img src="Logo-06.png" alt="AIMS Financials logo" />
+          </div>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+          </ul>
+          <a href="#schedule" class="btn-primary nav-cta">Book a Meeting</a>
+          <!-- Hamburger icon for mobile navigation -->
+          <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero section with a striking call‑to‑action. A custom background
+           illustrates financial growth while maintaining the brand palette. -->
+      <section id="home" class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content container">
+          <h1>Plan Your Future with Confidence</h1>
+          <p>
+            We provide personalised financial guidance to help executives and
+            professionals gain clarity, control and peace of mind over their
+            financial lives.
+          </p>
+          <a href="#schedule" class="btn-primary">Schedule Your Complimentary Session</a>
+        </div>
+      </section>
+      <!-- About section introduces the practice and philosophy. The copy is
+           intentionally broad because personal LinkedIn information could not
+           be retrieved. -->
+      <section id="about" class="about">
+        <div class="container">
+          <h2>About Us</h2>
+          <p>
+            AIMS Financials is a boutique financial planning firm based in
+            California. We partner with successful professionals and
+            entrepreneurs to build thoughtful strategies that align money with
+            values. Our process goes beyond numbers—it centres on your
+            aspirations, family and wellbeing.
+          </p>
+          <p>
+            By taking the time to understand what truly matters to you, we
+            craft customised plans designed to simplify complexity, enhance
+            efficiency and empower you to achieve your goals. Your success is
+            our mission, and your peace of mind is our priority.
+          </p>
+        </div>
+      </section>
+      <!-- Services section highlights core offerings using simple cards with
+           matching icons. -->
+      <section id="services" class="services">
+        <div class="container">
+          <h2>Our Services</h2>
+          <div class="service-cards">
+            <div class="service-card">
+              <ion-icon name="bar-chart-outline"></ion-icon>
+              <h3>Investment Management</h3>
+              <p>
+                Tailored investment strategies designed to grow and preserve
+                your wealth over the long term.
+              </p>
+            </div>
+            <div class="service-card">
+              <ion-icon name="calendar-number-outline"></ion-icon>
+              <h3>Retirement Planning</h3>
+              <p>
+                Clear roadmaps to ensure a comfortable, secure retirement that
+                reflects your lifestyle and goals.
+              </p>
+            </div>
+            <div class="service-card">
+              <ion-icon name="shield-checkmark-outline"></ion-icon>
+              <h3>Risk Management</h3>
+              <p>
+                Comprehensive risk strategies to protect your family and assets
+                against the unexpected.
+              </p>
+            </div>
+            <div class="service-card">
+              <ion-icon name="calculator-outline"></ion-icon>
+              <h3>Tax &amp; Estate Planning</h3>
+              <p>
+                Optimisation of your tax position and guidance on the smooth
+                transfer of wealth across generations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Scheduling section embeds the external appointment tool in an
+           iframe, allowing visitors to book directly from the site. -->
+      <section id="schedule" class="schedule">
+        <div class="container">
+          <h2>Book an Appointment</h2>
+          <p>
+            Ready to take the next step? Pick a time that works for you and
+            let’s start planning your future.
+          </p>
+          <div class="iframe-wrapper">
+            <iframe
+              src="https://aimsfinancials.lirplan.com/calendar"
+              title="AIMS Financials appointment scheduler"
+              loading="lazy"
+              allowtransparency="true"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer-content">
+        <p>&copy; 2025&nbsp;AIMS Financials. All rights reserved.</p>
+        <nav class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#schedule">Schedule</a>
+        </nav>
+      </div>
+    </footer>
+    <!-- Custom script for navigation toggle and smooth scrolling -->
+    <script src="script.js"></script>
+  </body>
+</html>
